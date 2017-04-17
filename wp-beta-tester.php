@@ -106,9 +106,7 @@ class wp_beta_tester {
 		if ( $result || isset( $args['_beta_tester'] ) ) {
 			return $result;
 		}
-		if ( ( 0 !== strpos( $url, 'http://api.wordpress.org/core/version-check/' ) ) &&
-		     ( 0 !== strpos( $url, 'https://api.wordpress.org/core/version-check/' ) )
-		) {
+		if ( false === strpos( $url, '//api.wordpress.org/core/version-check/' ) ) {
 			return $result;
 		}
 
